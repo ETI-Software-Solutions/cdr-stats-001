@@ -92,3 +92,9 @@ installation, training and customization
 
 Please email us at cdr-stats@star2billing.com for more information
 
+git-core
+python-tools
+mod_wsgi
+libevent-devel
+
+
