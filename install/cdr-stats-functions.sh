@@ -26,8 +26,8 @@ CELERYD_USER="celery"
 CELERYD_GROUP="celery"
 CDRSTATS_ENV="cdr-stats"
 HTTP_PORT="8008"
-SOUTH_SOURCE='hg+http://bitbucket.org/andrewgodwin/south/@ecaafda23e600e510e252734d67bf8f9f2362dc9#egg=South-dev'
-branch=STABLE
+SOUTH_SOURCE='git+https://github.com/eggjs/egg-development.git'
+branch=master
 db_backend=MySQL
 
 
@@ -294,12 +294,12 @@ func_install_frontend(){
 
     case $INSTALL_MODE in
         'CLONE')
-            git clone git://github.com/Star2Billing/cdr-stats.git
+            git clone https://github.com/fakhrihuseynov/cdr-stats.git
             
             #Install Develop / Master
             if echo $branch | grep -i "^DEVEL" > /dev/null ; then
                 cd cdr-stats
-                git checkout -b develop --track origin/develop
+                git checkout -b master --track origin/develop
             fi
         ;;
         # 'DOWNLOAD')
